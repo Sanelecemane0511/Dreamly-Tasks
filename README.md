@@ -1,4 +1,22 @@
-# CulinaryAdventures
+# Dreamly-Tasks
+**Angular Task Management Application**
+
+## Project Description
+Dreamly-Tasks is a productivity app created with Angular. It allows users to create, organize, and track their daily goals in a fast and responsive interface.
+
+## Technical Skills Used
+* **Framework:** Angular (TypeScript).
+* **Frontend:** HTML5 and CSS3.
+* **Architecture:** Component-based development.
+* **Tools:** Angular CLI and VS Code.
+
+## Main Features
+* **Dynamic Task Lists:** Users can add and remove tasks without the page reloading.
+* **State Management:** I used Angular’s data-binding to ensure the UI stays updated with the latest user input.
+* **Responsive Layout:** The app is designed to look good on both desktop and mobile screens.
+
+## Technical Challenge Solved
+I faced a problem where the task data was being lost whenever the page refreshed. I solved this by implementing **Local Storage** logic. This allows the browser to save the user's tasks locally, so their data is still there even if they close the tab or refresh the page.# CulinaryAdventures
 **ASP.NET Core and C# Web Application**
 
 ## Project Description
