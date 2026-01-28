@@ -1,0 +1,32 @@
+<div class="overlay" *ngIf="task" (click)="close()">
+  <div class="floater" (click)="$event.stopPropagation()">
+    <header>
+      <h2>Edit Task</h2>
+      <button class="close-btn" (click)="close()">✕</button>
+    </header>
+
+    <section class="body">
+      <label>Task</label>
+      <input type="text" [(ngModel)]="edit.text" />
+
+      <label>Priority</label>
+      <select [(ngModel)]="edit.priority">
+        <option value="low">Low</option>
+        <option value="med">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <label>Due date</label>
+      <input type="date" [(ngModel)]="edit.dueDate" />
+
+      <label>Notes</label>
+      <textarea [(ngModel)]="notes" rows="4" placeholder="Add extra notes…"></textarea>
+    </section>
+
+    <footer class="actions">
+      <button class="save" (click)="save()">Save</button>
+      <button class="cancel" (click)="close()">Close</button>
+      <button class="delete" (click)="delete()">Delete</button>
+    </footer>
+  </div>
+</div>

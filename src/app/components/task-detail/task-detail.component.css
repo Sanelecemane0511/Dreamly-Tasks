@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+.overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
+  z-index: 1000;
+  animation: fadeIn .25s ease;
+}
+
+.floater{
+  background: #ffffff;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .18);
+  padding: 1.8rem 2rem;
+  font-family: 'Inter', sans-serif;
+  animation: slideDown .3s ease;
+}
+
+/* ---- header ---- */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.4rem;
+}
+header h2{
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+.close-btn{
+  background: #f3f4f6;
+  border: none;
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.close-btn:hover{ background: #e5e7eb; color: #111827; }
+
+/* ---- body ---- */
+.body label{
+  display: block;
+  margin: .9rem 0 .35rem;
+  font-size: .8rem;
+  font-weight: 500;
+  color: #374151;
+}
+.body input[type=text],
+.body input[type=date],
+.body select,
+.body textarea{
+  width: 100%;
+  padding: .65rem .75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: .95rem;
+  transition: border-color .2s, box-shadow .2s;
+}
+.body input:focus,
+.body select:focus,
+.body textarea:focus{
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, .15);
+}
+textarea{ resize: vertical; min-height: 90px; }
+
+/* ---- footer actions ---- */
+.actions{
+  margin-top: 1.6rem;
+  display: flex;
+  gap: .6rem;
+}
+.actions button{
+  flex: 1;
+  padding: .6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: .95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .2s, transform .1s;
+}
+.actions button:active{ transform: scale(.98); }
+
+.save{ background: #10b981; color: #fff; }
+.save:hover{ background: #059669; }
+
+.cancel{ background: #f3f4f6; color: #374151; }
+.cancel:hover{ background: #e5e7eb; }
+
+.delete{ margin-left: auto; background: #ef4444; color: #fff; }
+.delete:hover{ background: #dc2626; }
+
+/* ---- animations ---- */
+@keyframes fadeIn{ from{ opacity: 0; } to{ opacity: 1; } }
+@keyframes slideDown{ from{ transform: translateY(-30px); opacity: 0; } to{ transform: translateY(0); opacity: 1; } }

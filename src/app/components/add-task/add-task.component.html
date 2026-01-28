@@ -1,0 +1,19 @@
+<form class="add-form" (ngSubmit)="submit()">
+  <input
+    [(ngModel)]="text"
+    name="text"
+    placeholder="What needs to be done?"
+    required
+    minlength="2"
+  />
+
+  <select [(ngModel)]="priority" name="priority">
+    <option value="low">Low</option>
+    <option value="med">Medium</option>
+    <option value="high">High</option>
+  </select>
+
+  <input type="date" [(ngModel)]="dueDate" name="dueDate" />
+
+  <button type="submit">Add</button>
+</form>

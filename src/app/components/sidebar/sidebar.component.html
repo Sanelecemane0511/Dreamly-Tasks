@@ -1,0 +1,45 @@
+<div class="sidebar">
+  <h2 class="side-title">Previous Tasks</h2>
+
+  <!-- HIGH -->
+  <section class="priority-sec">
+    <h3 class="priority-head high">High Priority</h3>
+    <ul class="history">
+      <li *ngFor="let t of highTasks"
+          (click)="select(t.id)"
+          [class.done]="t.done"
+          class="hist-item">
+        <span class="txt">{{ t.text }}</span>
+      </li>
+    </ul>
+    <p class="empty" *ngIf="highTasks.length === 0">None</p>
+  </section>
+
+  <!-- MEDIUM -->
+  <section class="priority-sec">
+    <h3 class="priority-head med">Medium Priority</h3>
+    <ul class="history">
+      <li *ngFor="let t of medTasks"
+          (click)="select(t.id)"
+          [class.done]="t.done"
+          class="hist-item">
+        <span class="txt">{{ t.text }}</span>
+      </li>
+    </ul>
+    <p class="empty" *ngIf="medTasks.length === 0">None</p>
+  </section>
+
+  <!-- LOW -->
+  <section class="priority-sec">
+    <h3 class="priority-head low">Low Priority</h3>
+    <ul class="history">
+      <li *ngFor="let t of lowTasks"
+          (click)="select(t.id)"
+          [class.done]="t.done"
+          class="hist-item">
+        <span class="txt">{{ t.text }}</span>
+      </li>
+    </ul>
+    <p class="empty" *ngIf="lowTasks.length === 0">None</p>
+  </section>
+</div>

@@ -1,0 +1,28 @@
+<ul class="task-list">
+  <li *ngFor="let t of tasks"
+    [id]="'task-'+t.id"
+    class="task-item"
+    [class.done]="t.done">
+    <input type="checkbox" [checked]="t.done" (change)="toggle(t)" />
+
+    <!-- view mode -->
+    <div *ngIf="editingId !== t.id" class="text"
+         (dblclick)="startEdit(t)"
+         [class.overdue]="isOverdue(t.dueDate)">
+      <span [class.strike]="t.done">{{ t.text }}</span>
+      <small class="due" *ngIf="t.dueDate">due {{ t.dueDate }}</small>
+    </div>
+
+    <!-- edit mode -->
+    <div *ngIf="editingId === t.id" class="edit">
+      <input type="text" [(ngModel)]="editText" (keyup.enter)="saveEdit(t)"
+             (blur)="cancelEdit()" />
+    </div>
+
+    <span class="tag" [ngClass]="priorityClass(t.priority)">
+      {{ t.priority | uppercase }}
+    </span>
+
+    <button class="del" (click)="delete(t.id)">✕</button>
+  </li>
+</ul>
