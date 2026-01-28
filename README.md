@@ -1,50 +1,19 @@
-# Dreamly Tasks – Angular 19  
-&gt; A single-page task manager built for CTU module OSD522 FA2 2025.
+# CulinaryAdventures
+**ASP.NET Core and C# Web Application**
 
----
+## Project Description
+CulinaryAdventures is a web platform built for food lovers to share and discover recipes. This project demonstrates my ability to use the MVC (Model-View-Controller) pattern to create a clean and organized web application.
 
-##  Features
--   Add, edit, delete, toggle-done  
--   Priority levels (Low │ Medium │ High) + colour tags  
--   Due-date picker  
--   Rich notes (multi-line) per task  
--   Persistent storage (localStorage)  
--   Responsive 2-panel layout (sidebar + main card)  
--   Glass-morphism / soft-shadow styling  
--   Angular 19 – module based – no extra libraries  
+## Technical Skills Used
+* **Backend:** C# and ASP.NET Core.
+* **Database:** Entity Framework Core with SQL Server.
+* **Frontend:** HTML, CSS, and Bootstrap.
+* **Tools:** Visual Studio Code and Git.
 
----
+## Main Features
+* **Recipe Management:** Users can browse different food categories and view detailed recipes.
+* **Dynamic Content:** The application pulls recipe data from a SQL database.
+* **Clean UI:** Designed a user-friendly interface that makes it easy to navigate through culinary content.
 
-##  Tech Stack
-| Tool        | Version |
-|-------------|---------|
-| Angular CLI | 19.x    |
-| TypeScript  | 5.x     |
-| CSS3        | native  |
-| RxJS        | shipped with CLI |
-
----
-
-## ⚙️ Setup & Run
-
-1. **Prerequisites**  
-   - Node.js ≥ 18  
-   - Angular CLI (global)  
-     ```bash
-     npm i -g @angular/cli
-     ```
-
-2. **Clone / unzip project**  
-   ```bash
-   cd dreamly-tasks
-
-3.   **Install dependencies**
-    - npm install
-
-4. **Start dev server**
-    -ng serve
-    -Open http://localhost:4200 – live reload enabled.
-
-5. **Production build**
-    -ng build --configuration production
-    -Output → dist/dreamly-tasks/
+## Technical Challenge Solved
+While building the recipe display page, I had a problem where the images were not loading correctly from the database paths. I fixed this by updating the "Static File" configuration in the Program.cs file. This ensured that all recipe images showed up instantly, creating a much better experience for the user.
